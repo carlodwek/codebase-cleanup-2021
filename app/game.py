@@ -3,6 +3,17 @@ from random import choice
 
 def determine_winner(c,u):
 
+    """
+    Compares the computer choice and user choice against a directory of outcomes and outputs a resultant message.
+
+    Params:
+        c (string), the computer's choice: either rock, paper or scissors
+        u (string), the user's choice: either rock, paper or scissors
+
+    Examples:
+        determine_winner("rock", "scissors")
+    """
+
     winners = {
     "rock":{
         "rock": None, # represents a tie

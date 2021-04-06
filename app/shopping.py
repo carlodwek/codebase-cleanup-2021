@@ -3,11 +3,32 @@ from datetime import datetime
 from pandas import read_csv
 
 def format_usd(i):
+    """
+    Returns a dollar formatted version of a number to two decimal places.
+
+    Params:
+        i (numeric, like int or float), number to be formatted.
+
+    Examples:
+        format_usd(18.5)
+    """
     return f"${i:.2f}"
 
 def find_product(selected_id, products):
+    """
+    Returns the dictionaries containing the information associated with a certain product identifier.
+
+    Params:
+        selected_id (numeric, int), selected product identifier to be used to identify matching products.
+        products (list, containing dictionaries), the directory of product information accesed to find matching products.
+
+    Examples:
+        find_product(1, products)
+    """
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     return matching_products
+
+
 
 if __name__ == "__main__":
     # READ INVENTORY OF PRODUCTS
